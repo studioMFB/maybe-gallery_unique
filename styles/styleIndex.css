@@ -10,7 +10,22 @@ html {
   height: 600px;
 }
 
-.titleIndex {
+.titleMaybe {
+    color: black;
+    font-weight:400;
+    font-size: 140px;
+    font-family: recursive, helvetica, sans-serif;
+    position: relative
+    outline: none;
+    text-align: center;
+}
+
+.titleMaybe img {
+    width: 40%;
+    height: auto;
+}
+
+.titleGU {
     color: #DAA520;
     text-shadow:-4px 4px blue;
     font-weight:400;
@@ -43,6 +58,7 @@ a:active {
     text-align: center;
 }
 .drawingIndex img{
+    margin-top:5%;
     text-align: center;
     width: 55%;
     height: auto;
