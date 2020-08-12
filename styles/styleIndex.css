@@ -99,9 +99,5 @@ width: 35%;
 
 @media screen and (min-width:320px) and (max-width:640px) {
   /* CSS for screens that are 320 pixels or less will be put in this section */
-  #ARTWORK {
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  height: auto;
-}}
+
+}
