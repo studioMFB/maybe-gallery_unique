@@ -3,112 +3,8 @@
   zoom: 1.0 ;
 }
 
-/*html {
-  scroll-behavior: smooth;
-}*/.
-/*
-#section1 {
-  height: 600px;
-}
-
-#section2 {
-  height: 600px;
-}
-
-.titleMaybe {
-    color: black;
-    font-weight:400;
-    font-size: 120px;
-    font-family: recursive, helvetica, sans-serif;
-    position: relative
-    outline: none;
-    text-align: center;
-}
-
-.titleGU {
-    color: #DAA520;
-    font-family: recursive, helvetica, sans-serif;
-    text-shadow:-4px 4px blue;
-    font-weight:400;
-    font-size: 120px;
-    position: relative
-    outline: none;
-    text-align: center;
-}
-*/
-/*
-a:link {
-    color: #F8F8F8;
-  text-decoration: none;
-}
-a:visited {
-    color: #F8F8F8;
-  text-decoration: none;
-}
-a:hover, a:active, a:focus, a.lastclicked {
-    color: black;
-  text-decoration: none;
-  outline: none;
-}
-.sidebarMenu {
-    color: black;
-    font-family: recursive, helvetica, sans-serif;
-    font-weight:normal;
-    font-size: 15px;
-    position:fixed;
-    top:20%;
-    outline: none;
-    text-align: left;
-}
-*/
-/*
-a:link {
-    color: #F8F8F8;
-  text-decoration: none;
-}
-a:visited {
-    color: #F8F8F8;
-  text-decoration: none;
-}
-a:hover, a:active, a:focus, a.lastclicked {
-    color: black;
-  text-decoration: none;
-  outline: none;
-}
-*/
-/*
-.drawingIndex{
-    text-align: center;
-}
-.drawingIndex img{
-    margin-top:5%;
-    text-align: center;
-    height: 500px;
-    width: auto;
-}
-.titleMaybe {
-        color: black;
-        font-weight:400;
-        font-size: 120px;
-        font-family: recursive, helvetica, sans-serif;
-        position: relative
-        outline: none;
-        text-align: center;
-    }
-    .titleGU {
-        color: #DAA520;
-        font-family: recursive, helvetica, sans-serif;
-        text-shadow:-4px 4px blue;
-        font-weight:400;
-        font-size: 120px;
-        position: relative
-        outline: none;
-        text-align: center;
-    }
-*/
-
-
 html {
+scroll-behavior: smooth;
   box-sizing: border-box;
 }
 
@@ -126,6 +22,7 @@ body{
 img{
     justify-content: center;
     align-items: center;
+    left: 50%;
 }
 h1 {
   margin: 0;
