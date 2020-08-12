@@ -98,8 +98,10 @@ width: 35%;
 
   /* CSS for screens that are 320 pixels or less will be put in this section */
 @media screen and (min-width:320px) and (max-width:640px) {
+#ARTWORK {
     display: block;
 margin-left: auto;
 margin-right: auto;
-width: 100%;
+width: 50%;
+}
 }
