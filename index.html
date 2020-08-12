@@ -1,23 +1,278 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Gallery Unique</title>
-        <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Recursive">
-<link rel="stylesheet" type="text/css" href="styles/styleIndex.css" media="screen"/>
-<div id="section1">
-    <a href="#section2">
-<div class="titleMaybe">Maybe<br>X</div>
-<div class="titleGU">Gallery <br> Unique</div>
-</a>
-</div>
-    </head>
+ <html lang="en" dir="ltr">
+<head>
+     <meta charset="utf-8">
+     <title>Gallery Unique</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Recursive">
+ <link rel="stylesheet" type="text/css" href="styles/styleIndex.css" media="screen"/>
+ <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic' rel='stylesheet' type='text/css'>
+</head>
+
     <body>
-        <div class="drawingIndex" id="section2">
-        <a href="#section1">
-            <img src="images/GU_drawing01Crop.png" alt="Gallery Unique drawing 01">
-        </a>
-</div>
+        <nav class="Quick-navigation">
+          <a href="#HOME" class="Quick-navigation-item">HOME</a>
+          <a href="#ABOUT" class="Quick-navigation-item">ABOUT</a>
+          <a href="#ARTWORK" class="Quick-navigation-item">ARTWORK</a>
+          <a href="#SHOP" class="Quick-navigation-item">SHOP</a>
+          <a href="#CONTACT" class="Quick-navigation-item">CONTACT</a>
+        </nav>
+
+        <section id="HOME" class="js-scroll-step">
+          <h1><div class="homeTitleMaybe"><h1>Maybe</h1></div>
+              <div class="homeTitleX"><h1>x</h1></div>
+              <div class="homeTitleGU"><h1>Gallery<br>Unique</h1></div></h1>
+        </section>
+        <section id="ABOUT"  class="js-scroll-step">
+          <h1>ABOUT</h1>
+        </section>
+        <section id="ARTWORK" class="js-scroll-step">
+          <h1><img src="images/GU_drawing01small.png" alt="artwork"></h1>
+        </section>
+        <section id="SHOP" class="js-scroll-step">
+          <h1>SHOP</h1>
+        </section>
+        <section id="CONTACT" class="js-scroll-step">
+          <h1>CONTACT</h1>
+        </section>
+
+
+        <nav class="Quick-navigation">
+          <a href="#HOME" class="Quick-navigation-item">HOME</a>
+          <a href="#ABOUT" class="Quick-navigation-item">ABOUT</a>
+          <a href="#ARTWORK" class="Quick-navigation-item">ARTWORK</a>
+          <a href="#SHOP" class="Quick-navigation-item">SHOP</a>
+          <a href="#CONTACT" class="Quick-navigation-item">CONTACT</a>
+        </nav>
+
+
+
+
+
+        <script>
+
+            (function () {
+
+               //////////////////////
+            	// Utils
+              //////////////////////
+                function throttle(fn, delay, scope) {
+                    // Default delay
+                    delay = delay || 250;
+                    var last, defer;
+                    return function () {
+                        var context = scope || this,
+                            now = +new Date(),
+                            args = arguments;
+                        if (last && now < last + delay) {
+                            clearTimeout(defer);
+                            defer = setTimeout(function () {
+                                last = now;
+                                fn.apply(context, args);
+                            }, delay);
+                        } else {
+                            last = now;
+                            fn.apply(context, args);
+                        }
+                    }
+                }
+
+                function extend(destination, source) {
+                    for (var k in source) {
+                        if (source.hasOwnProperty(k)) {
+                            destination[k] = source[k];
+                        }
+                    }
+                    return destination;
+                }
+
+               //////////////////////
+            	// END Utils
+              //////////////////////
+
+               //////////////////////
+               // Scroll Module
+               //////////////////////
+
+                var ScrollManager = (function () {
+
+                    var defaults = {
+
+                            steps: null,
+                            navigationContainer: null,
+                            links: null,
+                            scrollToTopBtn: null,
+
+                            navigationElementClass: '.Quick-navigation',
+                            currentStepClass: 'current',
+                            smoothScrollEnabled: true,
+                            stepsCheckEnabled: true,
+
+                            // Callbacks
+                            onScroll: null,
+
+                            onStepChange: function (step) {
+                                var self = this;
+                                var relativeLink = [].filter.call(options.links, function (link) {
+                                    link.classList.remove(self.currentStepClass);
+                                    return link.hash === '#' + step.id;
+                                });
+                                relativeLink[0].classList.add(self.currentStepClass);
+                            },
+
+                            // Provide a default scroll animation
+                            smoothScrollAnimation: function (target) {
+                                $('html, body').animate({
+                                    scrollTop: target
+                                }, 'slow');
+                            }
+                        },
+
+                        options = {};
+
+                    // Privates
+                    var _animation = null,
+                        currentStep = null,
+                        throttledGetScrollPosition = null;
+
+                    return {
+
+                        scrollPosition: 0,
+
+                        init: function (opts) {
+
+                            options = extend(defaults, opts);
+
+                            if (options.steps === null) {
+                                console.warn('Smooth scrolling require some sections or steps to scroll to :)');
+                                return false;
+                            }
+
+                            // Allow to customize the animation engine ( jQuery / GSAP / velocity / ... )
+                            _animation = function (target) {
+                                target = typeof target === 'number' ? target : $(target).offset().top;
+                                return options.smoothScrollAnimation(target);
+                            };
+
+                            // Activate smooth scrolling
+                            if (options.smoothScrollEnabled)  this.smoothScroll();
+
+                            // Scroll to top handling
+                            if (options.scrollToTopBtn) {
+                                options.scrollToTopBtn.addEventListener('click', function () {
+                                    options.smoothScrollAnimation(0);
+                                });
+                            }
+
+                            // Throttle for performances gain
+                            throttledGetScrollPosition = throttle(this.getScrollPosition).bind(this);
+                            window.addEventListener('scroll', throttledGetScrollPosition);
+                            window.addEventListener('resize', throttledGetScrollPosition);
+
+                            this.getScrollPosition();
+                        },
+
+                        getScrollPosition: function () {
+                            this.scrollPosition = window.pageYOffset || window.scrollY;
+                            if (options.stepsCheckEnabled) this.checkActiveStep();
+                            if (typeof  options.onScroll === 'function') options.onScroll(this.scrollPosition);
+                        },
+
+                        doSmoothScroll: function (e) {
+                            if (e.target.nodeName === 'A') {
+                                e.preventDefault();
+                                if (location.pathname.replace(/^\//, '') === e.target.pathname.replace(/^\//, '') && location.hostname === e.target.hostname) {
+                                    var targetStep = document.querySelector(e.target.hash);
+                                    targetStep ? _animation(targetStep) : console.warn('Hi! You should give an animation callback function to the Scroller module! :)');
+                                }
+                            }
+                        },
+
+                        smoothScroll: function () {
+                            if (options.navigationContainer !== null) options.navigationContainer.addEventListener('click', this.doSmoothScroll);
+                        },
+
+                        checkActiveStep: function () {
+                            var scrollPosition = this.scrollPosition;
+
+                            [].forEach.call(options.steps, function (step) {
+                                var bBox = step.getBoundingClientRect(),
+                                    position = step.offsetTop,
+                                    height = position + bBox.height;
+
+                                if (scrollPosition >= position && scrollPosition < height && currentStep !== step) {
+                                    currentStep = step;
+                                    step.classList.add(self.currentStepClass);
+                                    if (typeof options.onStepChange === 'function') options.onStepChange(step);
+                                }
+                                step.classList.remove(options.currentStepClass);
+                            });
+                        },
+
+                        destroy: function () {
+                            window.removeEventListener('scroll', throttledGetScrollPosition);
+                            window.removeEventListener('resize', throttledGetScrollPosition);
+                            options.navigationContainer.removeEventListener('click', this.doSmoothScroll);
+                        }
+                    }
+                })();
+                 //////////////////////
+                 // END scroll Module
+                 //////////////////////
+
+
+                //////////////////////
+                // APP init
+                //////////////////////
+
+                var scrollToTopBtn = document.querySelector('.Scroll-to-top'),
+                    steps = document.querySelectorAll('.js-scroll-step'),
+                    navigationContainer = document.querySelector('.Quick-navigation'),
+                    links = navigationContainer.querySelectorAll('a'),
+                    progressIndicator = document.querySelector('.Scroll-progress-indicator');
+
+                ScrollManager.init({
+                    steps: steps,
+                    scrollToTopBtn: scrollToTopBtn,
+                    navigationContainer: navigationContainer,
+                    links: links,
+
+                    // Customize onScroll behavior
+                    onScroll: function () {
+                        var percentage = ScrollManager.scrollPercentage();
+                        percentage >= 90 ? scrollToTopBtn.classList.add('visible') : scrollToTopBtn.classList.remove('visible');
+
+                        if (percentage >= 10) {
+                            progressIndicator.innerHTML = percentage + "%";
+                            progressIndicator.classList.add('visible');
+                        } else {
+                            progressIndicator.classList.remove('visible');
+                        }
+                    },
+
+            		// Behavior when a step changes
+            		// default : highlight links
+
+            		// onStepChange: function (step) {},
+
+            		// Customize the animation with jQuery, GSAP or velocity
+                 // default : jQuery animate()
+                 // Eg with GSAP scrollTo plugin
+
+            		//smoothScrollAnimation: function (target) {
+            		//		TweenLite.to(window, 2, {scrollTo:{y:target}, ease:Power2.easeOut});
+              	 //}
+
+                });
+
+                //////////////////////
+                // END APP init
+                //////////////////////
+
+            })();
+
+       </script>
+
+
+
     </body>
 </html>

@@ -1,7 +1,7 @@
-html {
+/*html {
   scroll-behavior: smooth;
-}
-
+}*/.
+/*
 #section1 {
   height: 600px;
 }
@@ -13,53 +13,179 @@ html {
 .titleMaybe {
     color: black;
     font-weight:400;
-    font-size: 140px;
+    font-size: 120px;
     font-family: recursive, helvetica, sans-serif;
     position: relative
     outline: none;
     text-align: center;
-}
-
-.titleMaybe img {
-    width: 40%;
-    height: auto;
 }
 
 .titleGU {
     color: #DAA520;
+    font-family: recursive, helvetica, sans-serif;
     text-shadow:-4px 4px blue;
     font-weight:400;
-    font-size: 140px;
-    font-family: recursive, helvetica, sans-serif;
+    font-size: 120px;
     position: relative
     outline: none;
     text-align: center;
 }
-
+*/
+/*
 a:link {
-    color: #DAA520;
+    color: #F8F8F8;
   text-decoration: none;
 }
 a:visited {
-    color: #DAA520;
+    color: #F8F8F8;
   text-decoration: none;
 }
-a:hover {
-    color: #DAA520;
+a:hover, a:active, a:focus, a.lastclicked {
+    color: black;
+  text-decoration: none;
+  outline: none;
+}
+.sidebarMenu {
+    color: black;
+    font-family: recursive, helvetica, sans-serif;
+    font-weight:normal;
+    font-size: 15px;
+    position:fixed;
+    top:20%;
+    outline: none;
+    text-align: left;
+}
+*/
+/*
+a:link {
+    color: #F8F8F8;
   text-decoration: none;
 }
-a:active {
-    color: #DAA520;
+a:visited {
+    color: #F8F8F8;
   text-decoration: none;
 }
-
-
+a:hover, a:active, a:focus, a.lastclicked {
+    color: black;
+  text-decoration: none;
+  outline: none;
+}
+*/
+/*
 .drawingIndex{
     text-align: center;
 }
 .drawingIndex img{
     margin-top:5%;
     text-align: center;
-    width: 55%;
-    height: auto;
+    height: 500px;
+    width: auto;
+}
+.titleMaybe {
+        color: black;
+        font-weight:400;
+        font-size: 120px;
+        font-family: recursive, helvetica, sans-serif;
+        position: relative
+        outline: none;
+        text-align: center;
+    }
+    .titleGU {
+        color: #DAA520;
+        font-family: recursive, helvetica, sans-serif;
+        text-shadow:-4px 4px blue;
+        font-weight:400;
+        font-size: 120px;
+        position: relative
+        outline: none;
+        text-align: center;
+    }
+*/
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:after, *:before {
+  box-sizing: inherit;
+}
+html, body {
+  height: 100%;
+}
+body{
+    color: black;
+  font-family: recursive, Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  min-height: 100%;
+  height: 100vh;
+}
+.Quick-navigation {
+  position: fixed;
+  top: 30%;
+  left: 2%;
+  margin: -5px;
+  padding-bottom: -5px;
+  transform: translateY(-50%);
+}
+.Quick-navigation-item {
+    font-size:12px;
+    font-weight: normal;
+    color: #F8F8F8;
+    text-decoration: none;
+    transition color: 0.5s;
+    padding: 2px;
+    display: block;
+}
+.Quick-navigation-item:hover{
+    color: black;
+}
+.Quick-navigation-item.current{
+  color: black;
+}
+.homeTitleMaybe{
+    color: black;
+    font-weight:400;
+    font-size: 60px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+.homeTitleX{
+    color: rgba(0, 0, 0, 0.5);
+    font-weight:400;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.homeTitleGU{
+    color: rgba(0, 0, 0, 0.5);
+    font-weight:400;
+    font-size: 30px;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    z-index: 50%;
+}
+#HOME {
+}
+#ABOUT {
+}
+#ARTWORK {
+}
+#SHOP{
+}
+#CONTACT{
 }
