@@ -105,8 +105,8 @@ section {
   }  
 .Quick-navigation {
     position: fixed;
-    right: 0;
-    bottom: 0;
+    bottom: 30%;
+    left: 2%;
     margin: -5px;
     padding-bottom: -5px;
     transform: translateY(-50%);
