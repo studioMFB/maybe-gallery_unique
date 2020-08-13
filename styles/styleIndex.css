@@ -85,7 +85,7 @@ section {
 #ABOUT {
 }
 #ARTWORK {
-
+text-align: center
 }
 #SHOP{
 }
@@ -94,6 +94,8 @@ section {
 
 
   /* CSS for screens that are 320 pixels or less will be put in this section */
+/*
 @media screen and (min-width:320px) and (max-width:640px) {
 
 }
+*/
