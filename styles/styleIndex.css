@@ -110,7 +110,7 @@ section {
     padding-bottom: -5px;
     transform: translateY(-50%);
  }
-img{
+.artworkImg img{
     width: 50%;
     height: auto;
  }
