@@ -97,7 +97,7 @@ section {
 
 @media screen and (max-width:500px) {
 .homeTitleMaybe{
-    color: blue;
+    color: black;
     font-weight:400;
     font-size: 60px;
     display: flex;
