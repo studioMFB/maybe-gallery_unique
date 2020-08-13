@@ -102,14 +102,17 @@ section {
     font-size: 60px;
     display: flex;
     justify-content: left;
-    
+  }  
 .Quick-navigation {
-  position: fixed;
-  top: 0;
-
-  margin: -5px;
-  padding-bottom: -5px;
-  transform: translateY(-50%);
-}
+    position: fixed;
+    top: 0;
+    margin: -5px;
+    padding-bottom: -5px;
+    transform: translateY(-50%);
+ }
+#ARTWORK img{
+    width: 80%;
+    height: auto;
+ }
 }
 
