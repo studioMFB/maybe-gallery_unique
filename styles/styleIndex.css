@@ -95,7 +95,7 @@ section {
 
 /* CSS for screens that are 320 pixels or less will be put in this section */
 @media screen and (max-width:500px) and (min-height:800px) {
-  #ARTWORK img{
+ img{
  width: 80%;
  height: auto;
 }}
