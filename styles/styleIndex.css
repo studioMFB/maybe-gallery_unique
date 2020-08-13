@@ -96,6 +96,13 @@ section {
 /* CSS for screens that are 320 pixels or less will be put in this section */
 
 @media screen and (max-width:500px) and (max-height:800px) {
+.homeTitleMaybe{
+    color: blue;
+    font-weight:400;
+    font-size: 60px;
+    display: flex;
+    justify-content: left;
+    
 .Quick-navigation {
   position: fixed;
   top: 0;
