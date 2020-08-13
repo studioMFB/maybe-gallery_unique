@@ -110,7 +110,7 @@ section {
     padding-bottom: -5px;
     transform: translateY(-50%);
  }
-#ARTWORK img{
+img{
     width: 50%;
     height: auto;
  }
