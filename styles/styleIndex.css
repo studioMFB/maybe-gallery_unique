@@ -115,7 +115,7 @@ section {
  .artworkImg img{
      position: absolute;
        top: 230%;
-       left: 20%;
+       left: 18%;
        transform: translateX(-10%) translateY(-14%);
        max-width: 80%;
        max-height: 80%;
@@ -134,9 +134,10 @@ section {
      color: #C0C0C0;
      text-decoration: none;
      transition color: 0.5s;
-     margin-top: 10%;
+     margin-top: 8%;
      margin-left: 7%;
-     padding: 5px 0px 5px 2px;
+     margin-bottom: 8%;
+     padding: 2px 0px 0px 2px;
      display: block;
  }
  .Quick-navigation-item:hover{
