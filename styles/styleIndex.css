@@ -42,13 +42,19 @@ section {
 .Quick-navigation-item {
     font-size:12px;
     font-weight: normal;
-    color: #F8F8F8;
+    color: #E0E0E0;
     text-decoration: none;
     transition color: 0.5s;
     padding: 2px;
     display: block;
 }
 .Quick-navigation-item:hover{
+    color: black;
+}
+.Quick-navigation-item:focus{
+    color: black;
+}
+.Quick-navigation-item:active{
     color: black;
 }
 .Quick-navigation-item.current{
