@@ -134,10 +134,10 @@ section {
      color: #C0C0C0;
      text-decoration: none;
      transition color: 0.5s;
-     margin-top: 10%;
+     margin-top: 7%;
      margin-left: 7%;
      margin-bottom: 7%;
-     padding: 2px 0px 0px 2px;
+     padding: 4px 0px 0px 2px;
      display: block;
  }
  .Quick-navigation-item:hover{
