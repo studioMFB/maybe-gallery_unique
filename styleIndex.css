@@ -1,0 +1,148 @@
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
+html {
+scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+*, *:after, *:before {
+  box-sizing: inherit;
+}
+html, body {
+  height: 100%;
+}
+body{
+    color: black;
+  font-family: recursive, Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  min-height: 100%;
+  height: 100vh;
+}
+.Quick-navigation {
+  position: fixed;
+  top: 30%;
+  left: 2%;
+  margin: -5px;
+  padding-bottom: -5px;
+  transform: translateY(-50%);
+}
+.Quick-navigation-item {
+    font-size:12px;
+    font-weight: normal;
+    color: #E0E0E0;
+    text-decoration: none;
+    transition color: 0.5s;
+    padding: 2px;
+    display: block;
+}
+.Quick-navigation-item:hover{
+    color: black;
+}
+.Quick-navigation-item:focus{
+    color: black;
+}
+.Quick-navigation-item:active{
+    color: black;
+}
+.Quick-navigation-item.current{
+  color: black;
+}
+.homeTitleMaybe{
+    color: black;
+    font-weight:400;
+    font-size: 60px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+.homeTitleX{
+    color: rgba(0, 0, 0, 0.5);
+    font-weight:400;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.homeTitleGU{
+    color: rgba(0, 0, 0, 0.5);
+    font-weight:400;
+    font-size: 30px;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    z-index: 50%;
+}
+#HOME {
+}
+#ABOUT {
+}
+#ARTWORK {
+/*text-align: center*/
+}
+#SHOP{
+}
+#CONTACT{
+}
+
+
+/* CSS for screens that are 320 pixels or less will be put in this section */
+
+@media screen and (max-width:500px) {
+.homeTitleMaybe{
+    color: black;
+    font-weight:400;
+    font-size: 60px;
+    display: flex;
+    justify-content: left;
+  }
+ .artworkImg img{
+     position: absolute;
+       top: 230%;
+       left: 20%;
+       transform: translateX(-10%) translateY(-14%);
+       max-width: 80%;
+       max-height: 80%;
+ }
+ .Quick-navigation {
+   background-color: white;
+   position: fixed;
+   width: 100%;
+   height:7%;
+   top: 2%;
+ }
+ .Quick-navigation-item {
+     float: left;
+     font-size:12px;
+     font-weight: normal;
+     color: #C0C0C0;
+     text-decoration: none;
+     transition color: 0.5s;
+     margin-top: 5%;
+     margin-left: 7%;
+     padding: 5px 4px 5px 4px;
+     display: block;
+ }
+ .Quick-navigation-item:hover{
+     color: black;
+ }
+ .Quick-navigation-item.current{
+   color: black;
+ }
+
+
+
+
+}
