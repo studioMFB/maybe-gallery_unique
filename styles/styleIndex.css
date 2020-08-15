@@ -28,6 +28,12 @@ a {
 a: link {
     Color: rgba(0, 0, 0, 0.5);
 }
+a: active {
+    Color: rgba(0, 0, 0, 0.5);
+}
+a: visited {
+    Color: rgba(0, 0, 0, 0.5);
+}
 section {
   display: flex;
   justify-content: center;
