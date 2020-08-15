@@ -89,7 +89,7 @@ section {
 }
 .homeTitleX{
     /*color: rgba(0, 0, 0, 0.5);*/
-      color: #B0B0B0;
+      color: #A9A9A9;
     font-weight:400;
     font-size: 30px;
     display: flex;
@@ -98,7 +98,7 @@ section {
 }
 .homeTitleGU{
     /*color: rgba(0, 0, 0, 0.5);*/
-      color: #B0B0B0;
+      color: #A9A9A9;
     font-weight:400;
     font-size: 30px;
     display: flex;
