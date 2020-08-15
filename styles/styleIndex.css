@@ -24,16 +24,18 @@ h1 {
 }
 a {
     text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
 }
 a: link {
-    Color: rgba(0, 0, 0, 0.5);
-}
-a: active {
-    Color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.5);
 }
 a: visited {
-    Color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.5);
 }
+a: active {
+    color: rgba(0, 0, 0, 0.5);
+}
+
 section {
   display: flex;
   justify-content: center;
@@ -63,10 +65,10 @@ section {
 .Quick-navigation-item:hover{
     color: black;
 }
-.Quick-navigation-item:focus{
+.Quick-navigation-item:active{
     color: black;
 }
-.Quick-navigation-item:active{
+.Quick-navigation-item:focus{
     color: black;
 }
 .Quick-navigation-item.current{
@@ -154,6 +156,9 @@ section {
      display: block;
  }
  .Quick-navigation-item:hover{
+     color: black;
+ }
+ .Quick-navigation-item:focus{
      color: black;
  }
  .Quick-navigation-item.current{
