@@ -126,7 +126,8 @@ section {
   }
  .artworkImg img{
      position: absolute;
-       top: 230%;
+/* top: 230%; */
+       top: auto;
        left: 18%;
        transform: translateX(-10%) translateY(-14%);
        max-width: 80%;
