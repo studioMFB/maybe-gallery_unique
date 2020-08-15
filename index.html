@@ -4,12 +4,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <meta charset="utf-8">
      <title>Gallery Unique</title>
+
+
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Recursive">
  <link rel="stylesheet" type="text/css" href="styles/styleIndex.css" media="screen"/>
  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic' rel='stylesheet' type='text/css'>
 </head>
 
     <body>
+
         <nav class="Quick-navigation">
           <a href="#HOME" class="Quick-navigation-item">HOME</a>
           <a href="#ABOUT" class="Quick-navigation-item">ABOUT</a>
@@ -28,7 +31,7 @@
         <section id="ABOUT"  class="js-scroll-step">
             <a href="#ARTWORK">
           <h1><div class="aboutText">
-        Maybe invited the Gallery Unique to showcase a unique piece of artwork every two month. During this limited time, a signed copy of the artwork will be available to purchase online.
+        Maybe invited the Gallery Unique to showcase an unique piece of artwork every two month. During this limited time, a signed copy of the artwork will be available to purchase online.
     </div></h1>
     </a>
         </section>
@@ -69,7 +72,24 @@
           </h1>
         </section>
         <section id="CONTACT" class="js-scroll-step">
-          <h1>CONTACT</h1>
+          <h1>
+              <div class="container">
+  <form action="action_page.php">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="firstName" name="firstname" placeholder="Your name..">
+    <label for="lname">Last Name</label>
+    <input type="text" id="lastName" name="lastname" placeholder="Your last name..">
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+              <a href="https://www.instagram.com/maybewearit/?hl=en" target="_blank">
+      <img class="instaLogo" src="images/instaLogoGrey.jpg" alt="Maybe on Instagram">
+      </a>
+          </h1>
         </section>
 
 
@@ -306,6 +326,13 @@
                 //////////////////////
 
             })();
+
 </script>
+
     </body>
+    <!--<footer>
+        <a href="https://www.instagram.com/maybewearit/?hl=en">
+<img class="instaLogo" src="images/instaLogoGrey.jpg" alt="Maybe on Instagram">
+</a>
+    </footer>-->
 </html>
