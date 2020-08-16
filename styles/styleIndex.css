@@ -14,7 +14,8 @@ html, body {
   height: 100%;
 }
 body{
-  color: #A0A0A0;
+  /*color: #A0A0A0;*/
+  color: #A9A9A9;
   font-family: Recursive, Helvetica, Arial, sans-serif;
   margin: 0;
 }
