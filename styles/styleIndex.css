@@ -134,10 +134,28 @@ section {
 /*text-align: center*/
 }
 #SHOP{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.butCheckout{
+    color: #A0A0A0;
+    background-color: white;
+    text-align: center;
+    width: 100px;
+    margin-left: 42%;
+    margin-right: auto;
+    padding: 5px 5px 5px 5px;
+    border-color: #f2f2f2;
+    border-width: 1px;
+}
+.butCheckout:hover{
+    background-color: #f2f2f2;
 }
 #CONTACT{
     font-size: 10px;
-    margin-left: 35%;
+    margin-left: auto;
+    margin-right: auto;
     width: 30%;
 }
 /* Style inputs with type="text", select elements and textareas */
