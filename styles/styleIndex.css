@@ -241,6 +241,15 @@ input[type=submit]:hover {
      margin-left: 13%;
      width: 80%;
  }
+ #SHOP{
+     margin-left: auto;
+     margin-right: auto;
+     width: 90%;
+ }
+ .butCheckout{
+     margin-left: 36%;
+     margin-right: auto;
+ }
  #CONTACT{
      font-size: 12px;
      margin-left: 5%;
