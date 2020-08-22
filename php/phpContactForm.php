@@ -22,7 +22,7 @@ if (!empty($errors)) {
    $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
 }
 */
-$mailTo = "studiomfb@gmail.com";
+$mailTo = "f.brunet-2019@ac.uk";
 $subject = "contact form - Gallery Unique";
 $headers = "From: ".$emailUser;
 $txt = "You have recieve an email from " .$nameUser.".\n\n".$messageUser;
