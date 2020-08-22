@@ -4,7 +4,7 @@
 }
 
 html {
-scroll-behavior: smooth;
+  scroll-behavior: smooth;
   box-sizing: border-box;
 }
 *, *:after, *:before {
@@ -14,19 +14,23 @@ html, body {
   height: 100%;
 }
 body{
-  /*color: #A0A0A0;*/
-  color: #A9A9A9;
+  color: #000000;
   font-family: Recursive, Helvetica, Arial, sans-serif;
   margin: 0;
 }
-h1 {
-  margin: 0;
-  padding: 0;
+header {
+    position: fixed;
+    width: 100%;
+    height: 46px;
+    background-color: white;
 }
+footer {
+bottom: 0;
+}
+
 a {
     text-decoration: none;
-    /*color: rgba(0, 0, 0, 0.5);*/
-    color: #A0A0A0;
+    color: #696969;
 }
 /*
 a: link {
@@ -39,58 +43,32 @@ a: active {
     color: #A0A0A0;
 }
 */
-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /*color: rgba(0, 0, 0, 0.5);*/
-  /*color: #A0A0A0;*/
-  font-size: 2rem;
-  min-height: 100%;
-  height: 100vh;
-}
-.hide{
-    display: none;
-}
-.hover:hover + .hide{
-    display: block;
-    color: blue;
-}
-.Quick-navigation {
-  position: fixed;
-  top: 30%;
-  left: 2%;
-  margin: -5px;
-  padding-bottom: -5px;
-  transform: translateY(-50%);
-}
 
-.Quick-navigation-item {
-    font-size:12px;
+.menuTop {
+    margin-top: 16px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+.menuTop-item {
+    text-align: center;
+    font-size: 16px;
     font-weight: normal;
-    /*color: #E0E0E0;*/
-    color: rgba(0, 0, 0, 0);
-
     text-decoration: none;
     transition color: 0.5s;
-    padding: 2px;
-    display: block;
+    padding: 0px 20px 0px 20px;
 }
-.Quick-navigation-item:hover{
-    color: #A0A0A0;
+.menuTop-item:hover{
+    /*color: #ADFF2F;*/
+    /*color: #4B0082;*/
+    /*color: #7CFC00;*/
+    color: #191970;
 }
-.Quick-navigation-item:active{
-    color: #A0A0A0;
+.menuTop-item:active{
 }
-.Quick-navigation-item:focus{
-}
-.Quick-navigation-item.current{
-    color: #A0A0A0;
+.menuTop-item:focus{
 }
 .maybeLogo{
-
-}
-.homeTitleMaybe{
     color: black;
     font-weight:400;
     font-size: 60px;
@@ -98,122 +76,77 @@ section {
     justify-content: left;
     align-items: left;
 }
-.homeTitleX{
-    /*color: rgba(0, 0, 0, 0.5);*/
-    /*color: #A9A9A9;*/
-    /*color: #A0A0A0;*/
-    font-weight:400;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.homeTitleGU{
-    /*color: rgba(0, 0, 0, 0.5);*/
-    /*color: #A0A0A0;*/
-    font-weight:400;
-    font-size: 30px;
-    display: flex;
-    justify-content: right;
-    align-items: right;
-    z-index: 50%;
-}
-#HOME {
-}
-#HOME img {
-    width: 70%;
-    height: auto;
-    margin-left: 10%;
-}
-#ABOUT {
-    font-size: 20px;
-    text-align: left;
-    margin-left: 33%;
-    width: 34%;
-}
-#ARTWORK {
-/*text-align: center*/
-}
-#SHOP{
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-.butCheckout{
-    color: #A0A0A0;
-    background-color: white;
-    text-align: center;
-    width: 100px;
-    margin-left: 42%;
-    margin-right: auto;
-    padding: 5px 5px 5px 5px;
-    border: 1px solid #f2f2f2;
-}
-.butCheckout:hover{
-    background-color: #f2f2f2;
-}
-#CONTACT{
-    font-size: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-}
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 11px; /* Some padding */
-  border: 0px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-input[type=submit] {
-  background-color: #D3D3D3;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-input[type=submit]:hover {
-  background-color: #A0A0A0;
-}
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
 .instaLogo{
+    display: block;
+    text-align: center;
+    bottom: 0;
     padding-top: 30px;
     padding-bottom: : 5px;
-    margin-left: 50%;
     width: 8%;
     height: auto;
+}
+
+.wrapper{
+  text-align: center;
+  top: 70px;
+  display: grid;
+  grid-template-row: 10fr;
+  align-items: stretch;
+}
+.wrapper .btn{
+  text-align: center;
+  top: 70px;
+  display: grid;
+  grid-template-row: 10fr;
+  grid-gap: 50fr;
+  align-items: stretch;
+}
+//////////////////////////////////
+.container {
+  position: relative;
+  width: 50%;
+}
+.container img {
+    width: 100%;
+    height: auto;
+}
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.container .btn:hover {
+  background-color: black;
 }
 
 /* CSS for screens that are 320 pixels or less will be put in this section */
 
 @media screen and (max-width:500px) {
  .artworkImg img{
-     position: absolute;
-/* top: 230%; */
-       top: 250%;
-       left: 18%;
-       transform: translateX(-10%) translateY(-14%);
-       max-width: 80%;
-       max-height: 80%;
+   position: absolute;
+   top: 250%;
+   left: 18%;
+   transform: translateX(-10%) translateY(-14%);
+   max-width: 80%;
+   max-height: 80%;
  }
- .Quick-navigation {
+ .menuTop {
    background-color: white;
    position: fixed;
    width: 100%;
    height:12%;
    top: 2%;
  }
- .Quick-navigation-item {
+ .menuTop-item {
      float: left;
      font-size:13px;
      font-weight: normal;
@@ -226,34 +159,14 @@ input[type=submit]:hover {
      padding: 4px 0px 0px 2px;
      display: block;
  }
- .Quick-navigation-item:hover{
+ .menuTop-item:hover{
      color: black;
  }
- .Quick-navigation-item:focus{
+ .menuTop-item:focus{
      color: black;
  }
- .Quick-navigation-item.current{
+ .menuTop-item.current{
    color: black;
- }
- #ABOUT {
-     font-size: 18px;
-     text-align: left;
-     margin-left: 13%;
-     width: 80%;
- }
- #SHOP{
-     margin-left: auto;
-     margin-right: auto;
-     width: 90%;
- }
- .butCheckout{
-     margin-left: 36%;
-     margin-right: auto;
- }
- #CONTACT{
-     font-size: 12px;
-     margin-left: 5%;
-     width: 90%;
  }
  .instaLogo{
      padding-top: 40px;
