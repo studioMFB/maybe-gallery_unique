@@ -168,7 +168,9 @@ section {
 
 .shopBut{
     text-align: center;
+    padding: 30px 0 30px 0;
 }
+/*
 .shopBut button{
     opacity: 0.4;
     padding: 5px 5px 5px 5px;
@@ -183,8 +185,8 @@ font-size: 14px;
 .shopBut button:hover{
     color: black;
     opacity: 0.6;
-
 }
+*/
 #CONTACT{
     font-size: 10px;
     margin-left: auto;
