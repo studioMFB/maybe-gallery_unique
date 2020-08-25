@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+ <html lang="en" dir="ltr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta charset="utf-8">
+     <title>Gallery Unique</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Recursive">
+ <link rel="stylesheet" type="text/css" href="styles/styleGalleryUnique.css" media="screen"/>
+<link rel="stylesheet" href="styles/styleSlideShow.css">
+<link rel="stylesheet" href="styles/styleFlickSlide.css">
+
+ <link rel="stylesheet" href="swiper.min.css">
+
+</head>
+
+    <body>
+
+        <nav class="Quick-navigation">
+          <a href="#HOME" class="Quick-navigation-item">HOME</a>
+          <a href="#ABOUT" class="Quick-navigation-item">ABOUT</a>
+          <a href="#ARTWORK" class="Quick-navigation-item">ARTWORK</a>
+          <a href="#SHOP" class="Quick-navigation-item">SHOP</a>
+          <a href="#CONTACT" class="Quick-navigation-item">CONTACT</a>
+        </nav>
+        <nav class="Quick-navigation">
+          <a href="#HOME" class="Quick-navigation-item">HOME</a>
+          <a href="#ABOUT" class="Quick-navigation-item">ABOUT</a>
+          <a href="#ARTWORK" class="Quick-navigation-item">ARTWORK</a>
+          <a href="#SHOP" class="Quick-navigation-item">SHOP</a>
+          <a href="#CONTACT" class="Quick-navigation-item">CONTACT</a>
+        </nav>
+
+
+        <section id="HOME" class="js-scroll-step">
+            <a href="#ABOUT">
+          <h1>
+              <img class="maybeLogo" src="images/MaybeXGalleryUnique_LogoPaintLight02.png" alt="Maybe logo">
+              <!--
+              <div class="homeTitleMaybe"><h1>Maybe</h1></div>
+              <div class="homeTitleX"><h1>x</h1></div>
+              <div class="homeTitleGU"><h1>Gallery<br>Unique</h1></div></h1>
+              -->
+              </a>
+        </section>
+        <section id="ABOUT"  class="js-scroll-step">
+            <a href="#ARTWORK">
+          <h1><div class="aboutText">
+        Maybe has invited the Gallery Unique to showcase on this page, every two month, an exclusive piece of artwork. During this limited time, a signed copy of the artwork will be available to purchase online.
+    </div></h1>
+    </a>
+        </section>
+        <section id="ARTWORK" class="js-scroll-step">
+            <a href="#SHOP">
+          <h1><div class="artworkImg"><img src="images/GU_drawing01smallcrop.png" alt="artwork"></div></h1>
+          </a>
+        </section>
+        <section id="SHOP" class="js-scroll-step">
+          <h1>
+              <div class="containerSlide">
+      <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+                <div class="carousel-cell"><img src="images/drawings/01/drawing01_framed_low.png" alt=""></div>
+                <div class="carousel-cell"><img src="images/drawings/01/drawing01_alone_low.png" alt=""></div>
+                <div class="carousel-cell"><img src="images/drawings/01/drawing01_zoom_low.png" alt=""></div>
+              </div>
+          </div>
+          <div class="shopBut">
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="QRK8FMBWRWNRC">
+<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+        <!--  <button type="button" name="butCheck">CHECKOUT</button> -->
+      </div>
+
+        </h1>
+        </section>
+
+        <section id="CONTACT" class="js-scroll-step">
+          <h1>
+              <div class="containerContact">
+  <form action="phpContactForm.php">
+
+    <label for="name">Name</label>
+    <input type="text" name="name" placeholder="Your name.." required>
+    <label for="email">Email</label>
+    <input type="text" name="email" placeholder="Email" required>
+    <label for="message">Message</label>
+    <textarea name="message" placeholder="Write something.." style="height:200px"></textarea>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+  <a href="https://www.instagram.com/maybewearit/?hl=en" target="_blank">
+  <img class="instaLogo" src="images/instaLogoGrey.jpg" alt="Maybe on Instagram">
+      </a>
+        </h1>
+        </section>
+
+<script type="text/javascript" src="scripts/scriptIndex.js"></script>
+<script type="text/javascript" src="scripts/scriptSlideShow.js"></script>
+<script type="text/javascript" src="scripts/scriptFlickSlide.js"></script>
+
+
+    </body>
+</html>
